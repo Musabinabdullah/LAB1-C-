@@ -1,0 +1,32 @@
+using System;
+
+namespace jagged_array
+{
+  class Program
+{
+  static void Main(string[] args)
+{
+ Console.WriteLine("Hello World!");
+
+ int[][] jaged_array = new int [4][];
+
+jaged_array[0] = new int[2] {7,9};
+jaged_array[1] = new int[4] { 12, 42,26,28 };
+jaged_array[2] = new int[6] { 3,5,7,9,11,13 };
+jaged_array[3] = new int[3] { 4,6,8 };
+
+            for(int i = 0; i < jaged_array.Length; i++)
+         {
+            System.Console.Write("Element ((0)) : ",i+1);
+
+          for(int j = 0; j < jaged_array[i].Length; j++){
+
+            System.Console.Write(jaged_array[i][j] + "\t");
+
+ }
+    System.Console.WriteLine();
+      }
+     Console.ReadLine();
+}
+}
+}
