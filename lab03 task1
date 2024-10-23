@@ -1,32 +1,26 @@
 using System;
 
-namespace jagged_array
+class Program
 {
-  class Program
-{
-  static void Main(string[] args)
-{
- Console.WriteLine("Hello World!");
+    static void Main()
+    {
+        Console.Write("Enter num1: ");
+        double num1 = Convert.ToDouble(Console.ReadLine());
 
- int[][] jaged_array = new int [4][];
+        Console.Write("Enter num2: ");
+        double num2 = Convert.ToDouble(Console.ReadLine());
 
-jaged_array[0] = new int[2] {7,9};
-jaged_array[1] = new int[4] { 12, 42,26,28 };
-jaged_array[2] = new int[6] { 3,5,7,9,11,13 };
-jaged_array[3] = new int[3] { 4,6,8 };
+        Console.WriteLine($"Add: {num1} + {num2} = {num1 + num2}");
+        Console.WriteLine($"Subtraction: {num1} - {num2} = {num1 - num2}");
+        Console.WriteLine($"Multiplication: {num1} * {num2} = {num1 * num2}");
 
-            for(int i = 0; i < jaged_array.Length; i++)
-         {
-            System.Console.Write("Element ((0)) : ",i+1);
-
-          for(int j = 0; j < jaged_array[i].Length; j++){
-
-            System.Console.Write(jaged_array[i][j] + "\t");
-
- }
-    System.Console.WriteLine();
-      }
-     Console.ReadLine();
-}
-}
+        if (num2 != 0)
+        {
+            Console.WriteLine($"Division: {num1} / {num2} = {num1 / num2}");
+        }
+        else
+        {
+            Console.WriteLine("Division: Cannot divide by zero");
+        }
+    }
 }
