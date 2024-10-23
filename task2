@@ -1,22 +1,20 @@
 using System;
 
-namespace jagged_array
+class Program
 {
-    class Program
+    static int Square(int num)
     {
-        static void Main(string[] args)
-        {
-            // Console.WriteLine("Hello World!");
-
-            int[,] numbers2D = new int [3, 2 ] { { 9,99},{ 2,22},{ 5,55} };
-
-            foreach (int i in numbers2D)
-            {
-                System.Console.Write("(0)", i);
-            }
-        }
-
+        return num * num;
     }
 
-}
+    static void Main()
+    {
+        Console.WriteLine("Squares of the first 10 num:\n");
 
+        for (int i=1;i<=10;i++)
+        {
+            int square = Square(i);
+            Console.WriteLine($"The square of {i} is {square}");
+        }
+    }
+}
